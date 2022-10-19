@@ -1,3 +1,11 @@
+### 服务器间Docker容器迁移
+'''
+Docker容器迁移到另一台服务器的最常用方法是容器镜像迁移，即容器打包成镜像，压缩镜像，然后复制到另一个服务器解压
+step1(打包镜像): docker commit container-id image-name 
+step2(压缩镜像): docker save -o image_nxs.tar image_nxs:v1.0
+step3(恢复镜像): docker load -i image_nxs.tar
+'''
+
 ### 进程kill
 '''
 ps aux | grep python  查看python进程（训练后，GPU还在占用，需要kill掉进程）
